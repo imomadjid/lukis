@@ -2,6 +2,7 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "lukis",
   "compatibility_date": "2026-09-06",
+  "routes": [{ "pattern": "lukis.imomadjid.com", "custom_domain": true }],
   "assets": {
     "directory": "./dist",
   },
