@@ -1,6 +1,6 @@
 # Lukis
 
-Try [Lukis](https://lukis.mhmmadjid.workers.dev/).
+Try [Lukis](https://lukis.imomadjid.com/).
 
 Lukis turns a local PNG, JPEG, or WebP image into a painting. Adjust Paint and
 Brush, then download a PNG. Images stay in the browser.
