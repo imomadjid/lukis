@@ -52,7 +52,8 @@ Use Node.js 24 and the pinned pnpm version. Sign in with `pnpm exec wrangler log
 then run `pnpm deploy:check` to validate the upload or `pnpm deploy` to publish.
 Wrangler uses the account selected during login. Set `CLOUDFLARE_ACCOUNT_ID` in
 your shell to select another account. The Worker name is set in `wrangler.jsonc`;
-change it before deploying your own copy.
+change it before deploying your own copy. Production is served only at
+`lukis.imomadjid.com`; `workers.dev` and preview URLs are off.
 
 GitHub Actions runs formatting, lint, type checks, unit tests, and a deployment
 dry run for pull requests. Pushes to `main` and manual runs on `main` also deploy
@@ -60,7 +61,7 @@ the checked build to the existing `lukis` Worker. The hardware GPU and Helium
 browser suites still run locally before pushing; see [validation](docs/validation.md).
 
 Set repository Actions secrets `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN`.
-Use an account-scoped token with the permissions described in
+Use a token scoped to the account and the `imomadjid.com` zone, with the permissions in
 [Cloudflare's GitHub Actions guide](https://developers.cloudflare.com/workers/ci-cd/external-cicd/github-actions/).
 The local Wrangler OAuth login does not supply credentials to GitHub Actions.
 Deployment fails with a setup message until both secrets are present.
